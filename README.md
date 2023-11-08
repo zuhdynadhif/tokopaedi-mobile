@@ -68,6 +68,26 @@ Untuk menerapkan bonus, saya menambahkan properti baru pada ButtonItem berupa Co
 
 ## Tugas 8
 [Contents](#table-of-content)
+### 1.  Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+
+
+### 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+
+### 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+
+
+### 4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+
+### 5. Implementasi checklist
+#### a. Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru
+
+#### b. Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
+
+#### c. Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru.
+
+#### d. Membuat sebuah drawer pada aplikasi dengan beberapa ketentuan
 
 ## Tugas 9
 [Contents](#table-of-content)
