@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tokopaedi/widgets/left_drawer.dart';
+import 'package:tokopaedi/inventorylist_form.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -18,6 +20,7 @@ class MyHomePage extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
@@ -84,6 +87,16 @@ class ButtonCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
+          // TODO: Tambahkan Navigasi ke Halaman yang bersesuaian
+          if (item.name == "Tambah Item") {
+            // TODO: Tambahkan Navigasi ke MaterialPageRoute yang sesuai
+            Navigator.pushReplacement(
+              context, 
+              MaterialPageRoute(
+                builder: (context) => const InventoryFormPage(),
+              )
+            );
+          }
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
