@@ -14,7 +14,7 @@ Kelas: PBP C
 ## Tugas 7
 [Contents](#table-of-content)
 ### 1. Apa perbedaan utama antara stateless dan stateful
-Stateless dan stateful widget adalah jenis-jenis widget yang digunakan untuk membangun interface proyek flutter. Pada stateless widget, kondisi widget bersifat statis dan tampilannya didasarkan pada properti yang diberikan sejak awal. Contohnya adalah teks, icon, atau gambar. Sedangkan di sisi lain, stateful widget bersifat dinamis yang mana keadaan internal dari komponennya dapat diubah dalam satu siklus kehidupan aplikasi. Stateful widget digunakan ketika developer menginginkan perubahan pada komponen widget. Contoh dari stateful widget adalah formulir.
+`Stateless` dan `stateful` widget adalah jenis-jenis widget yang digunakan untuk membangun interface proyek flutter. Pada stateless widget, kondisi widget bersifat statis dan tampilannya didasarkan pada properti yang diberikan sejak awal. Contohnya adalah teks, icon, atau gambar. Sedangkan di sisi lain, stateful widget bersifat dinamis yang mana keadaan internal dari komponennya dapat diubah dalam satu siklus kehidupan aplikasi. Stateful widget digunakan ketika developer menginginkan perubahan pada komponen widget. Contoh dari stateful widget adalah formulir.
 
 ### 2. Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
 - Material<br>Menjadi widget utama untuk semua widget dalam sautu class
