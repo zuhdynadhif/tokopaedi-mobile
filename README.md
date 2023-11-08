@@ -1,16 +1,79 @@
 # tokopaedi
 
-A new Flutter project.
+Nama: Zuhdy Nadhif Ayyasy
+NPM: 2206081212
+Kelas: PBP C
 
-## Getting Started
+## Table of Content
+1. [Tugas 7](#tugas-7)
+2. [Tugas 8](#tugas-8)
+3. [Tugas 9](#tugas-9)
+4. [Tugas 10](#tugas-10)
+5. [Tugas 11](#tugas-11)
 
-This project is a starting point for a Flutter application.
+## Tugas 7
+[Contents](#table-of-content)
+### 1. Apa perbedaan utama antara stateless dan stateful
+Stateless dan stateful widget adalah jenis-jenis widget yang digunakan untuk membangun interface proyek flutter. Pada stateless widget, kondisi widget bersifat statis dan tampilannya didasarkan pada properti yang diberikan sejak awal. Contohnya adalah teks, icon, atau gambar. Sedangkan di sisi lain, stateful widget bersifat dinamis yang mana keadaan internal dari komponennya dapat diubah dalam satu siklus kehidupan aplikasi. Stateful widget digunakan ketika developer menginginkan perubahan pada komponen widget. Contoh dari stateful widget adalah formulir.
 
-A few resources to get you started if this is your first Flutter project:
+### 2. Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
+- Material<br>Menjadi widget utama untuk semua widget dalam sautu class
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Scaffold<br>Berfungsi untuk membangun widget appBar dan konten Body
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- AppBat<br>Untuk menampilkan bagian yang berada dibagian atas aplikasi
+
+- Text<br>Untuk menampilkan text
+
+- Column<br>Mengatur elemen secara vertikal
+
+- Padding<br>Memberikan jarak berupa padding pada widget
+
+- ButtonCard<br>Stateless widget yang digunakan untuk menampilkan tombol
+
+- InkWell<br>Widget untuk membangun action listener seperti sentuhan.
+
+- Icon<br>Untuk menampilkan icon
+
+- SnackBar<br>Widget untuk menampilkan pesan singkat pada bagian bawah aplikasi
+
+### 3. Implementasi cheklist
+
+#### a. Membuat sebuah program Flutter
+Saya membuat proyek flutter dengan melakukan command `flutter create tokopaedi` pada folder yang saya inginkan. Kemudian masuk ke folder tersebut dan menjalankan proyek flutter dengan `flutter run`.
+
+#### b. Membuat git
+Melakukan inisiasi git di lokal dan membuat repository baru pada akun github saya, kemudian menghubungkan keduanya.
+
+#### c. Membuat 3 tombol sederhana dengan ikon dan teks
+Pertama, saya menerapkan *clean architecture* pada proyek tokopaedi yaitu dengan memisahkan `main.dart` menjadi `main.dart` dan `menu.dart`. `menu.dart` akan berisi implementasi widget flutter pada tampilan main menu.
+
+Untuk membuat 3 tombol sederhana saya melakukan modifikasi pada MyHomePage menjadi sebuah stateless widget. Kemudian saya membuat 2 class, yaitu `ButtonItem` dan `ButtonCard`. Saya melakukan instansiasi `ButtonItem` sebagai list dan menjadikannya sebagai properti dari `MyHomePage`. Pada method `Widget Build`, saya membuat appBar dan juga body.
+
+#### d. Membuat `Snackbar` dengan tulisan tertentu
+Untuk membuat Snackbar, saya menambahkan kode berikut pada widget InkWell untuk menerapkan action listener berupa onTap().
+```(Dart)
+onTap: () {
+    // Memunculkan SnackBar ketika diklik
+    ScaffoldMessenger.of(context)
+    ..hideCurrentSnackBar()
+    ..showSnackBar(SnackBar(
+        content: Text("Kamu telah menekan tombol ${item.name}!")));
+},
+```
+Snackbar akan muncul ketika tombol ditekan.
+
+#### e. Bonus
+Untuk menerapkan bonus, saya menambahkan properti baru pada ButtonItem berupa Color yang dinamai dengan backgroundColor dan memasukkannya pada constructor. Kemudian pada items yang dimiliki `MyHomePage`, setiap instance dari `ButtonItem` dibuat sesuai dengan warna background yang diinginkan. Lalu, color Material pada `ButtonCard` disesuaikan dengan `ButtonItem` yang berkaitan.
+
+## Tugas 8
+[Contents](#table-of-content)
+
+## Tugas 9
+[Contents](#table-of-content)
+
+## Tugas 10
+[Contents](#table-of-content)
+
+## Tugas 11
+[Contents](#table-of-content)
