@@ -69,7 +69,7 @@ Untuk menerapkan bonus, saya menambahkan properti baru pada ButtonItem berupa Co
 ## Tugas 8
 [Contents](#table-of-content)
 ### 1.  Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
-
+Perbedaan antara Navigator.push() dan Navigator.pushReplacement() ada pada stack yang digunakan Navigator.Pada push(), route yang baru masuk ke dalam tumpukan paling atas dan ditampilkan ke pengguna, sedangkan pushReplacement() menghapus route paling atas dan menggantinya dengan route yang ingin di push, dalam kata lain, pushReplacement() mengganti .
 
 ### 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
 
@@ -82,12 +82,16 @@ Untuk menerapkan bonus, saya menambahkan properti baru pada ButtonItem berupa Co
 
 ### 5. Implementasi checklist
 #### a. Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru
+Untuk menambahkan halaman formulir tambah item baru, saya membuat stateful widget InventoryFormPage beserta class state-nya. State class tersebut dibuat menggunakan Scaffold, body scaffold diisi dengan class Form yang diisi dengan field (dibungkus dengan Padding class). Setiap field memiliki action listener dan validatornya masing-masing.
 
 #### b. Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
+Untuk mengarahkan pengguna, saya memodifikasi widget pada menu.dart yaitu ButtonCard dengan menambahkan kondisi pada action listener, sehingga ketika nama dari suatu button sesuai (yaitu tambah produk) akan diarahkan ke halaman formulir yang sudah dibuat dengan menggunakan Navigator.push().
 
 #### c. Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru.
+Untuk memunculkan data, saya menggunakan showDialog() yang mengembalikan AlertDialog() yang telah diisi dengan data yang ada. Fungsi tersebut saya tambahkan pada button save yang ada di formulir bagian bawah.
 
 #### d. Membuat sebuah drawer pada aplikasi dengan beberapa ketentuan
+Saya menggunakan StatelessWidget untuk membuat drawer dengan membangun class yang mengembalikan Drawer. Untuk menambahkan dua buah navigator, saya menggunakan 2 ListTile yang mengarahkan ke Halaman Utama dan ke halaman Tambah Produk.
 
 ## Tugas 9
 [Contents](#table-of-content)
