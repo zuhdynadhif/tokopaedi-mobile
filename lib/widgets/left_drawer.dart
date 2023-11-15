@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tokopaedi/inventorylist_form.dart';
-import 'package:tokopaedi/menu.dart';
+import 'package:tokopaedi/screens/inventorylist_form.dart';
+import 'package:tokopaedi/screens/menu.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
