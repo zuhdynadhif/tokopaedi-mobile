@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tokopaedi/screens/inventorylist_form.dart';
+import 'package:tokopaedi/screens/inventory_form.dart';
+import 'package:tokopaedi/screens/inventory_list.dart';
 
 
 class ButtonItem {
@@ -34,6 +35,13 @@ class ButtonCard extends StatelessWidget {
               context, 
               MaterialPageRoute(
                 builder: (context) => const InventoryFormPage(),
+              )
+            );
+          } else if (item.name == "Lihat Item") {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const InventoryListPage(),
               )
             );
           }

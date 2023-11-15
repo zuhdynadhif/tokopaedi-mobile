@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tokopaedi/screens/inventorylist_form.dart';
+import 'package:tokopaedi/screens/inventory_form.dart';
+import 'package:tokopaedi/screens/inventory_list.dart';
 import 'package:tokopaedi/screens/menu.dart';
 
 class LeftDrawer extends StatelessWidget {
@@ -44,6 +45,18 @@ class LeftDrawer extends StatelessWidget {
                 context, 
                 MaterialPageRoute(
                   builder: (context) => MyHomePage(),
+                )
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Lihat Item'),
+            onTap: () {
+              // TODO: Tambahkan Navigasi ke Halaman Tambah Item
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(
+                  builder: (context) => InventoryListPage(),
                 )
               );
             },
