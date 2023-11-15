@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tokopaedi/widgets/left_drawer.dart';
+import 'package:tokopaedi/models/item.dart';
 
 class InventoryFormPage extends StatefulWidget {
   const InventoryFormPage({super.key});
@@ -138,6 +139,14 @@ class _InventoryFormState extends State<InventoryFormPage> {
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
+                        // menambahkan item
+                        ItemList.addItem(Item(
+                          name: _name,
+                          price: _price,
+                          description: _description,
+                          amount: _amount,
+                        )
+                        );
                         showDialog(
                           context: context,
                           builder: (context) {
