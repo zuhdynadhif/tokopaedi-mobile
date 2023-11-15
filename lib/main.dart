@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tokopaedi/menu.dart';
+import 'package:tokopaedi/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());

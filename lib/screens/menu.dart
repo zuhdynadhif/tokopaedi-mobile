@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tokopaedi/widgets/left_drawer.dart';
-import 'package:tokopaedi/screens/inventorylist_form.dart';
-import 'package:tokopaedi/widgets/button_card.dart';
+import 'package:tokopaedi/screens/inventory_form.dart';
+import 'package:tokopaedi/widgets/home_button_card.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
