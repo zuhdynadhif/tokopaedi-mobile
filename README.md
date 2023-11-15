@@ -69,16 +69,26 @@ Untuk menerapkan bonus, saya menambahkan properti baru pada ButtonItem berupa Co
 ## Tugas 8
 [Contents](#table-of-content)
 ### 1.  Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
-Perbedaan antara Navigator.push() dan Navigator.pushReplacement() ada pada stack yang digunakan Navigator.Pada push(), route yang baru masuk ke dalam tumpukan paling atas dan ditampilkan ke pengguna, sedangkan pushReplacement() menghapus route paling atas dan menggantinya dengan route yang ingin di push, dalam kata lain, pushReplacement() mengganti .
+Perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()` ada pada stack yang digunakan `Navigator.Pada push()`, route yang baru masuk ke dalam tumpukan paling atas dan ditampilkan ke pengguna, sedangkan `pushReplacement()` menghapus route paling atas dan menggantinya dengan route yang ingin di push, dalam kata lain, `pushReplacement()` mengganti .
 
 ### 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
-
+| Layout Widget | Deskripsi |
+| ------------- | --------- |
+| Align | Widget yang meakukan align terhadap child yang dimilikinya yang bisa menyesuaikan dengan ukuran childnya |
+| AspectRatio | Widget yang membuat suatu ukuran yang membuat ukuran yang fix untuk anak-anknya |
+| Baseline | Container yang posisi child-nya bergantung pada baseline |
+| Center | Aligning child yang dimilikinya ditengah-tengah dirinya |
+| Constrained Box | Widget yang bisa memberikan batasan tertentu pada child yang dimilikinya |
+| Container | Layout widget yang bisa mengkombinasikan berbagai konfigurasi warna, posisi, hingga ukuran |
+| Padding | Widget yang akan memberikan padding yang spesifik bagi child-nya |
+| Transform | Widget yang bis menerapkan transformation sebelum mewarnai child-nya |
 
 ### 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
-
+* `Form`, digunakan mejadi sebuah container bagi beberapa form fields.
+* `TextFormFields` digunakan untuk menginput nilai-nilai dari user, yaitu nama, harga, deskripsi, dan jumlah.
 
 ### 4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
-
+Clean architecture pada flutter adalah melakukan separation of concerns, yaitu dengan mengorganisir file-file yang ada dalam proyek flutter sehingga lebih modular.
 
 ### 5. Implementasi checklist
 #### a. Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru
