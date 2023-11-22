@@ -108,18 +108,31 @@ Saya menggunakan StatelessWidget untuk membuat drawer dengan membangun class yan
 
 ### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
 
+Bisa, data JSON bisa kita ambil dan menyimpannya sebagai suatu dictionary. Tetapi jika tidak menerapkan modelling terhadap data JSON tersebut, developer akan kesulitan dalam mengatur, memodifikasi, dan memanipulasi data-data yang ada.
 
 ### 2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
 
+CookieRequest didapatkan dari package pbpp_django_auth. Class ini akan menyimpan data cookies dari proyek django yang terintegrasi dengan proyek flutter. CookieRequest harus dibagi kedalam seluruh komponen, sehingga keseluruhan aplikasi flutter dapat konsisten dan bisa menjalankan setiap fungsi aplikasi dengan baik.
 
 ### 3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
 
+Berikut ini adalah langkah-langkah yang harus dilakukan:
+
+a. Membuat class model Product (dengan atribut yang sama pada JSON) untuk menyimpan atribut pada JSON. 
+
+b. Pada class tersebut, dibuat method yang dapat mengubah data json menjadi sebuah instance model.    
+
+c. Setelah instance selesai dibuat, kita dapat menggunakannya sesuai dengan apa yang kita mau.
 
 ### 4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
 
+Dalam tugas ini, kita menggunakan `CookieRequest` yang dibuat oleh asods. Instance dari `CookieRequest` yang telah dibuat dijadikan atribut widget. Kemudian setelah user menginput data username dan password, program tersebut akan dieksekusi dan akan mengambil data dari Django. Django akan mengirim data status dan sebagainya sebagai respon dari pemanggilan. Flutter proyek akan menampilkan widget yang sesuai dengan respon yang diberikan.
 
 ### 5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
 
+- ListTile<br>Digunakan untuk menampilkan daftar fitur yang dapat diakses pada leftDrawer
+- TextField<br>Digunakan untuk menginput data dari user
+- ElevatedButton<br>Digunakan sebagai tombol yang akan mentrigger suatu method
 
 ### 6. Implementasi checklist
 
