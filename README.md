@@ -140,21 +140,30 @@ Dalam tugas ini, kita menggunakan `CookieRequest` yang dibuat oleh asods. Instan
 #### a. Memastikan deployment proyek tugas Django kamu telah berjalan dengan baik.
 
 
-#### b. Membuat halaman login pada proyek tugas Flutter.
+#### b. login dan logout pada proyek tugas Flutter
+
+Pertama, membuat app `authentication` pada Django project, menginstall django-cors-header beserta middleware yang dibutuhkannya, dan melakukan set up cookie. 
+
+Kemudian membuat views untuk melakukan login dan logout yang akan mengembalikan `JsonResponse` dan mengatur routing.
+
+Pada flutter, install provider, pbp_django_auth, dan http. Lalu mengubah main.dart menjadi widget Provider.
+
+Lalu membuat file login.dart yang akan menampilkan halaman login. Selain itu, routing pada main.dart juga diubah sedemikian rupa sehingga menampilkan halam login.
+
+Untuk fitur logout, pada menu.dart, tombol logout diubah sedemikan rupa sehingga ketika tapped akan mentrigger views pada django dan akan menampilkan halaman sesuai dengan response yang diberikan Django.
+
+#### c. Membuat model kustom sesuai dengan proyek aplikasi Django.
+
+Pertama, membuat model dart yang sesuai dengan proyek Django dengan memanfaatkan QuickType dan memasukkannya pada file model yang dibuat.
+
+#### d. Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint `JSON` di Django yang telah kamu deploy.
+
+Untuk mengambil data dari Django, perlu update permission pada `android/app/src/main/AndroidManifest.xml`.
+
+Kemudian, membuat file screens baru untuk menampilkan semua item yang ada. Hal ini dilakukan dengan membangun suatu aynchronus method yang melakukan fetch dari url terkait pada Django App. Data berupa JSON tersebut akan dikonversi menjadi sebuah model dan ditampilkan pada widget sesuai dengan atribut-atribut yang dimilikinya.
 
 
-#### c. Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
-
-
-#### d. Membuat model kustom sesuai dengan proyek aplikasi Django.
-
-
-#### e. Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint `JSON` di Django yang telah kamu deploy.
-
-    * Menampilkan name, amount, dan description dari masing-masing item pada halaman ini.
-
-
-#### f. Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
+#### e. Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
 
     1. Halaman ini dapat diakses dengan menekan salah satu item pada halaman daftar Item.
 
