@@ -106,6 +106,49 @@ Saya menggunakan StatelessWidget untuk membuat drawer dengan membangun class yan
 ## Tugas 9
 [Contents](#table-of-content)
 
+### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+
+### 2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+
+
+### 3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+
+### 4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+
+### 5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+
+### 6. Implementasi checklist
+
+
+#### a. Memastikan deployment proyek tugas Django kamu telah berjalan dengan baik.
+
+
+#### b. Membuat halaman login pada proyek tugas Flutter.
+
+
+#### c. Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
+
+
+#### d. Membuat model kustom sesuai dengan proyek aplikasi Django.
+
+
+#### e. Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint `JSON` di Django yang telah kamu deploy.
+
+    * Menampilkan name, amount, dan description dari masing-masing item pada halaman ini.
+
+
+#### f. Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
+
+    1. Halaman ini dapat diakses dengan menekan salah satu item pada halaman daftar Item.
+
+    2. Tampilkan seluruh atribut pada model item kamu pada halaman ini.
+
+    3. Tambahkan tombol untuk kembali ke halaman daftar item.
+
 ## Tugas 10
 [Contents](#table-of-content)
 
