@@ -156,6 +156,12 @@ Untuk fitur logout, pada menu.dart, tombol logout diubah sedemikan rupa sehingga
 
 Pertama, membuat model dart yang sesuai dengan proyek Django dengan memanfaatkan QuickType dan memasukkannya pada file model yang dibuat.
 
+Memodifikasi inventory_form.dart untuk menampilkan form yang sesuai dengan model yang ada dan men-sinkronkan dengan django app.
+
+Pada django, membuat views baru berupa create-flutter yang ketika dipanggil akan menyimpan product yang dikirim oleh flutter via POST method.
+
+Pada tombol add-product di Flutter, method onTap() dimodifikasi sehingga akan mengirimpkan data json ke Django.
+
 #### d. Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint `JSON` di Django yang telah kamu deploy.
 
 Untuk mengambil data dari Django, perlu update permission pada `android/app/src/main/AndroidManifest.xml`.
