@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:tokopaedi/models/product.dart';
+import 'package:tokopaedi/screens/detail_product.dart';
 import 'package:tokopaedi/widgets/left_drawer.dart';
 
 class ProductPage extends StatefulWidget {
@@ -80,7 +81,18 @@ Widget build(BuildContext context) {
                                     Text("${snapshot.data![index].fields.price}"),
                                     const SizedBox(height: 10),
                                     Text(
-                                        "${snapshot.data![index].fields.description}")
+                                        "${snapshot.data![index].fields.description}"),
+                                    ElevatedButton(
+                                      onPressed: (){
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => ProductDetailPage(product: snapshot.data![index],),
+                                          ),
+                                        );
+                                      }, 
+                                      child: const Text("Detail"),
+                                    )
                                 ],
                                 ),
                             ));
