@@ -171,11 +171,21 @@ Kemudian, membuat file screens baru untuk menampilkan semua item yang ada. Hal i
 
 #### e. Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
 
-    1. Halaman ini dapat diakses dengan menekan salah satu item pada halaman daftar Item.
-
-    2. Tampilkan seluruh atribut pada model item kamu pada halaman ini.
-
-    3. Tambahkan tombol untuk kembali ke halaman daftar item.
+Membuat file detail_product.dart yang berisi widget untuk menampilkan data model. Kemudian, pada list_product.dart ditambahkan kode berikut,
+```(dart)
+ElevatedButton(
+    onPressed: (){
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+        builder: (context) => ProductDetailPage(product: snapshot.data![index],),
+        ),
+    );
+    }, 
+    child: const Text("Detail"),
+)
+```
+sehingga, ketika button tersebut di tekan, akan masuk ke page detail_product.dart
 
 ## Tugas 10
 [Contents](#table-of-content)
